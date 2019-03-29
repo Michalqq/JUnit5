@@ -6,6 +6,7 @@ public class Item {
 
     public Item(String name, double price){
         this.name = name;
+        if (price < 0 ) throw new IllegalArgumentException(String.format(("Wrong price :  " + price)));
         this.price = price;
     }
     public void setName(String name){

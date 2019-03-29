@@ -23,7 +23,12 @@ public class BasketTest {
     }
     @Test(expected = IllegalArgumentException.class)
     public void shouldTrowExceptionWhenRemovingNegativeQuantity() {
-        Item item = new Item("",20);
+        Item item = new Item("computer",20);
         basket.removeItem(item, -10);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldTrowExceptionWhenAddingNegativeQuantity() {
+        Item item = new Item("computer",20);
+        basket.addItem(item, -1);
     }
 }

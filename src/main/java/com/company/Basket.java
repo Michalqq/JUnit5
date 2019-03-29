@@ -24,7 +24,7 @@ public class Basket {
             }
             order.put(item, quantity);
         } else {
-            throw new IllegalArgumentException(String.format(("Błędna ilość do dodania - " + quantity)));
+            throw new IllegalArgumentException(String.format(("Wrong quantity to add: " + quantity)));
         }
     }
 
@@ -43,7 +43,7 @@ public class Basket {
                 order.put(item, quantity);
             }
         } else {
-            throw new IllegalArgumentException(String.format("Błędna ilość do usunięcia - " + quantity));
+            throw new IllegalArgumentException(String.format("Wrong quantity to remove: " + quantity));
         }
     }
 
